@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+	<struts>
+	
+	
+<package name="student" namespace="/" extends="struts-default" >
+	<action name="*_*" class="com.action.{1}" method="{2}">
+		<result name="successStu">/stu.jsp</result> 
+		<result name="successTea">/tea.jsp</result> 
+		<result name="error">/error.jsp</result>   
+		<result name="teaAll">/query.jsp</result> 
+		<result name="stuAll">/query1.jsp</result> 
+		<result name="agree" type="redirectAction">StudentAction_queryStu</result>
+		<result name="apply" type="redirectAction">StudentAction_queryTea</result>
+		<result name="book">/queryBook.jsp</result> 
+		<result name="bookUpdate">/bookUpdate.jsp</result> 
+	</action>
+	
+  </package>
+ 
+  </struts>

@@ -1,0 +1,28 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+	<hibernate-configuration>
+	 <session-factory name="foo">
+					<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+					<!-- <property name="hibernate.connection.url">jdbc:mysql:///java87</property> -->
+					<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/test</property>
+					<property name="hibernate.connection.username">root</property>
+					<property name="hibernate.connection.password">root</property>
+					
+					<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property><!--配置方言,这个方言的配置必须存在  -->
+					
+					<property name="hibernate.hbm2ddl.auto">update</property>  <!-- 如果值是update,会自动建表 ,先看表名,表名不存在,在创建新的表-->
+					
+					<!-- 告诉hibernate框架,映射文件在哪里 -->
+					<mapping resource="com/beans/AdminInfo.hbm.xml"/>
+					<mapping resource="com/beans/Student.hbm.xml"/>
+					<mapping resource="com/beans/Teacher.hbm.xml"/>
+					<mapping resource="com/beans/Ts.hbm.xml"/>
+					<mapping resource="com/beans/Book.hbm.xml"/>
+					
+				</session-factory>
+	</hibernate-configuration>
+	
+
+    
+				

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+				"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+				"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+	<hibernate-mapping package="com.beans">  <!-- 实体类的包名 -->
+				<class name="Teacher" table="teacher"> <!-- 实体类名和数据库表的名字 -->
+					<id name="tid"> <!-- name值为实体类中的属性名 -->
+						<generator class="native"></generator><!-- native 指定主键生成策略 -->
+					</id>
+					
+					<property name="tuserName"></property><!--实体类的属性名 -->
+					<property name="password"></property>
+					<property name="course"></property>
+				</class>
+			</hibernate-mapping>
