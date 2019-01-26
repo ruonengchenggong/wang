@@ -17,7 +17,7 @@
 </select>
 <input type="submit" value="提交" />
 </form> -->
-	<a href="${pageContext.request.contextPath}/StudentAction_queryBook">点我查询</a>
+	<a href="${pageContext.request.contextPath}/StudentAction_queryBook">查询</a>
 
 </body>
 </html>
